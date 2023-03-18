@@ -1,0 +1,17 @@
+{
+  "key": "[Android Home Screen]",
+
+  "identity": "[Clock][Messages][Chrome]",
+
+  "selectors": {
+    "[Clock]": "#clock",
+
+    "[Messages]": "",
+    "[Play Store]": "",
+    "[Chrome]": "",
+
+    "[Search]": ""
+
+  }
+
+}

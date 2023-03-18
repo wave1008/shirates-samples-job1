@@ -1,0 +1,20 @@
+{
+  "key": "[iOS Home Screen]",
+
+  "identity": "[Calendar][Photos][Search]",
+
+  "selectors": {
+
+    "[Calendar]": "",
+    "[Photos]": "",
+    "[Reminders]": "",
+    "[Settings]": "",
+
+    "[Search]": "",
+
+    "[Safari]": "",
+    "[Messages]": ""
+
+  }
+
+}

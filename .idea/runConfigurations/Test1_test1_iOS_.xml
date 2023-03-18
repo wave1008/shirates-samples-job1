@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test1.test1(iOS)" type="JUnit" factoryName="JUnit">
+    <module name="shirates-samples-job1.test" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="product1.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="product1" />
+    <option name="MAIN_CLASS_NAME" value="product1.Test1" />
+    <option name="METHOD_NAME" value="test1" />
+    <option name="TEST_OBJECT" value="method" />
+    <envs>
+      <env name="SR_os" value="ios" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
