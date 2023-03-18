@@ -12,7 +12,6 @@ val appiumClientVersion = "8.1.0"
 
 repositories {
     mavenCentral()
-    maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots/")
 }
 
 dependencies {
@@ -43,9 +42,9 @@ tasks.test {
 
     // Filter test methods
     val envIncludeTestMatching = System.getenv("includeTestsMatching") ?: ""
+    val list = envIncludeTestMatching.split(",").map { it.trim() }
     filter {
         if (envIncludeTestMatching.isNotBlank()) {
-            val list = envIncludeTestMatching.split(",").map { it.trim() }
             for (item in list) {
                 println("includeTestMatching($item)")
                 includeTestsMatching(item)
@@ -58,14 +57,4 @@ tasks.test {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
-}
-
-configurations.all {
-    resolutionStrategy {
-
-        // cache dynamic versions for 10 minutes
-        cacheDynamicVersionsFor(10 * 60, "seconds")
-        // don't cache changing modules at all
-        cacheChangingModulesFor(0, "seconds")
-    }
 }
