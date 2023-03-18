@@ -85,7 +85,7 @@ sh ./gradlew cleanTest test -x compileKotlin --info
 
 ## SR_ prefix
 
-Environment variables with `SR_` prefix are routined to Shirates parameters.
+Environment variables with `SR_` prefix are routed to Shirates parameters.
 See also
 [running_with_gradle](https://github.com/ldi-github/shirates-core/blob/main/doc/markdown/in_action/running_test_on_ci_server/running_with_gradle.md)
 
