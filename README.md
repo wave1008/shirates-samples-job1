@@ -19,7 +19,7 @@ https://github.com/ldi-github/shirates-core/blob/main/doc/markdown/quick-start.m
 Implement **tasks.test** in `build.gradle.kts` as follows.
 
 ```kotlin
-    // Filter test methods
+// Filter test methods
 val envIncludeTestMatching = System.getenv("includeTestsMatching") ?: "*"
 val list = envIncludeTestMatching.split(",").map { it.trim() }
 filter {
