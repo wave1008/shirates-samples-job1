@@ -44,7 +44,7 @@ tasks.test {
     val envIncludeTestMatching = System.getenv("includeTestsMatching") ?: ""
     val list = envIncludeTestMatching.split(",").map { it.trim() }
     filter {
-        if (envIncludeTestMatching.isNotBlank()) {
+        if (list.any()) {
             for (item in list) {
                 println("includeTestMatching($item)")
                 includeTestsMatching(item)
