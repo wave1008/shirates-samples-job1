@@ -37,6 +37,23 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    jvmArgs = listOf(
+        "--add-exports", "java.desktop/sun.awt.image=ALL-UNNAMED"
+    )
+
+    // Filter test methods
+    val envIncludeTestMatching = System.getenv("includeTestsMatching") ?: ""
+    filter {
+        if (envIncludeTestMatching.isNotBlank()) {
+            val list = envIncludeTestMatching.split(",").map { it.trim() }
+            for (item in list) {
+                println("includeTestMatching($item)")
+                includeTestsMatching(item)
+            }
+        } else {
+            includeTestsMatching("*")
+        }
+    }
 }
 
 tasks.withType<KotlinCompile> {
